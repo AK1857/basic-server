@@ -2,7 +2,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 dotenv.config();
-const connectDB = require('./db');
+//const connectDB = require('./db');
 const cluster= require('cluster')
 const os= require('os')
 //const cros=require('cros')
@@ -19,7 +19,7 @@ const limiter = rateLimit({
 const app = express();
 app.use(limiter);
 //app.use(cros())
-connectDB();
+//connectDB();
 const port = 3000;
 app.use(express.json());
 let numberOfcore= os.cpus().length;
